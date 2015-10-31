@@ -10,7 +10,9 @@ cd panasonic-hbtn
 make all
 make install
 
-reboot
+depmod -a
+modprobe panasonic-hbtn
 ```
+Then try out if those buttons are in working order. 
 
 Tested with CF-19C MK1 with Ubuntu 15.10 i386 desktop. 
