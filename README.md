@@ -15,4 +15,9 @@ modprobe panasonic-hbtn
 ```
 Then try out if those buttons are in working order. 
 
+Finally, 
+```bash
+update-initramfs -u
+```
+
 Tested with CF-19C MK1 with Ubuntu 15.10 i386 desktop. 
