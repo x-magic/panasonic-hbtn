@@ -12,3 +12,5 @@ make install
 
 reboot
 ```
+
+Tested with CF-19C MK1 with Ubuntu 15.10 i386 desktop. 
