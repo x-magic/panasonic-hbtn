@@ -1,6 +1,6 @@
 obj-m = panasonic-hbtn.o
 
-KVERSION = $(shell uname -r)
+KVERSION ?= $(shell uname -r)
 
 all:
 	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
