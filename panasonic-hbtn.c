@@ -167,7 +167,7 @@ static int acpi_pcc_init_input(struct pcc_acpi *pcc)
     return 0;
 
  err_free_keymap:
-    sparse_keymap_free(input_dev);
+    input_unregister_device(input_dev);
  err_free_dev:
     input_free_device(input_dev);
     return error;
@@ -175,7 +175,7 @@ static int acpi_pcc_init_input(struct pcc_acpi *pcc)
 
 static void acpi_pcc_destroy_input(struct pcc_acpi *pcc)
 {
-    sparse_keymap_free(pcc->input_dev);
+    // sparse_keymap_free(pcc->input_dev);
     input_unregister_device(pcc->input_dev);
     /*
      * No need to input_free_device() since core input API refcounts
